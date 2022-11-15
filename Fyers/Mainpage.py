@@ -24,12 +24,18 @@ class HedgeMethod(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
+def df(param):
+    print(param)
+
 class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="Hello Raghavedra, Welcome to Algo Trading")
         label.pack(padx=10, pady=10)
+
+        button1 = tk.Button(self, text="Visit Page 1", command=lambda: df("Oyy!!"))
+        button1.pack()
 
 app = HedgeMethod()
 app.mainloop()
